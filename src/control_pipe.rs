@@ -88,10 +88,10 @@ impl<B: UsbBus> ControlPipe<'_, B> {
         // a stalled state.
         self.ep_out.unstall();
 
-        /*sprintln!("SETUP {:?} {:?} {:?} req:{} val:{} idx:{} len:{} {:?}",
+        log::debug!("SETUP {:?} {:?} {:?} req:{} val:{} idx:{} len:{} {:?}",
             req.direction, req.request_type, req.recipient,
             req.request, req.value, req.index, req.length,
-            self.state);*/
+            self.state);
 
         if req.direction == UsbDirection::Out {
             // OUT transfer

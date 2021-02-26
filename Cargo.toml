@@ -9,6 +9,9 @@ license = "MIT"
 authors = ["Matti Virkkunen <mvirkkunen@gmail.com>"]
 repository = "https://github.com/mvirkkunen/usb-device"
 
+[dependencies]
+log = "0.4"
+
 [dev-dependencies]
 libusb = "0.3.0"
 rand = "0.6.1"
